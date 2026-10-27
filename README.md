@@ -4,7 +4,7 @@ A minimal Docker setup that automatically fetches, updates, and runs the latest 
 > **Payout wallet — highly advised:** set your earning wallet in the **UrNetwork mobile app or website** before expecting rewards. This container does not configure wallet consent; a registered provider without a wallet is not paid.
 
 ## Build
-- UrNetwork_nightly v2026.10.20-1077406510
+- UrNetwork_nightly v2026.10.25-1081686250
 
 ## Features
 - Automated retrieval of the latest urNetwork Provider binary on startup (nightly build)
@@ -118,7 +118,6 @@ docker run -d --platform linux/amd64 \
   -e PASSWORD='mYv3rYsEcUr3dP@sSw0rD' \
   -v /path/to/your/proxy.txt:/app/proxy.txt \
   -v urnetwork_data:/home/urnetwork/.urnetwork \
-  -p 8080:8080 \
   urfoundation/docker-miner:latest
 
 # Option 2 : arm64 build
@@ -132,7 +131,6 @@ docker run -d --platform linux/arm64 \
   -e PASSWORD='mYv3rYsEcUr3dP@sSw0rD' \
   -v /path/to/your/proxy.txt:/app/proxy.txt \
   -v urnetwork_data:/home/urnetwork/.urnetwork \
-  -p 8080:8080 \
   urfoundation/docker-miner:latest
 ```
 
@@ -150,7 +148,6 @@ docker run -d --platform linux/amd64 \
   -e AUTHCODE='<AUTH-CODE>' \
   -v /path/to/your/proxy.txt:/app/proxy.txt \
   -v urnetwork_data:/home/urnetwork/.urnetwork \
-  -p 8080:8080 \
   urfoundation/docker-miner:latest
 
 # Option 2 : arm64 build
@@ -163,7 +160,6 @@ docker run -d --platform linux/arm64 \
   -e AUTHCODE='<AUTH-CODE>' \
   -v /path/to/your/proxy.txt:/app/proxy.txt \
   -v urnetwork_data:/home/urnetwork/.urnetwork \
-  -p 8080:8080 \
   urfoundation/docker-miner:latest
 ```
 
@@ -178,7 +174,6 @@ docker run -d --platform linux/amd64 \
   -e PASSWORD='mYv3rYsEcUr3dP@sSw0rD' \
   -e ALL_OPERATORS='Y' \
   -v urnetwork_data:/home/urnetwork/.urnetwork \
-  -p 8080:8080 \
   urfoundation/docker-miner:latest
 ```
 Each operator is authenticated with your account when its token is missing. To register every operator from a Bittensor hotkey instead, add:
